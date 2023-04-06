@@ -71,7 +71,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #ffffff;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
     padding: 10px 0px 10px 50px;
@@ -88,6 +88,7 @@ body {
 }
 
 .submit-button {
+    display: inline-block;
     background-color: var(--accent-clr);
     color: var(--text-clr);
     font-weight: bold;
@@ -96,6 +97,17 @@ body {
     border-radius: 10px;
     margin-bottom: 50px;
     padding: 10px 30px 10px 30px;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--text-clr);
+    color: var(--accent-clr);
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .account-link {
@@ -115,9 +127,40 @@ body {
     color: var(--text-clr);
 }
 
+.label[for="first-name"]:after,
+.label[for="email"]:after,
+.label[for="password"]:after,
+.label[for="confirm-password"]:after {
+    content:"*";
+    color: red;
+}
+
+.label[for="last-name"]:after,
+.label[for="phone"]:after {
+    content:" (optional)";
+    color: green;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
 .input {
     margin-bottom: 1.5rem;
     border: none;
-    border-bottom: 1px solid #0B131E;
+    border-bottom: 1px solid #cccccc;
     height: 1.5rem;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--text-clr);
+}
+
+input:not(:focus):not(:placeholder-shown):not(:optional):invalid {
+    border-bottom: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    border-bottom: 1px solid green;
+    background-color: rgba(0, 255, 0, 0.1);
 }
