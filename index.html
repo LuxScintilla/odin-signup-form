@@ -12,7 +12,7 @@
     
     <div class="login-art">
         <div class="logo">
-            <img src="img/logo-name-white.png">
+            <img src="img/logo-name-fancy.png">
         </div>
     </div>
     <section class="login-section">
@@ -28,7 +28,7 @@
 
         <div class="login-wrap">
             <h2 class="login-title">Let's do this!</h2>
-            <form class="form" action="#" method="post">
+            <form class="form" action="/" method="post">
 
                 <div class="left-section">
                     <p>
@@ -37,11 +37,11 @@
                     </p>
                     <p>
                         <label class="label" for="email">Email</label>
-                        <input class="input" type="email" id="email" name="email" placeholder="pirate@blackpearl.sea" required>
+                        <input class="input" type="email" id="email" name="email" placeholder="pirate@blackpearl.sea" pattern="[a-zA-Z0-9\.-_+]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}" required>
                     </p>
                     <p>
                         <label class="label" for="password">Password</label>
-                        <input class="input" type="password" id="password" name="password" minlength="6" maxlength="16" pattern="[a-zA-Z0-9_\-=+*&^%$£!#@\.?]" placeholder="password" required>
+                        <input class="input" type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[*&^%$£!?\.])[a-zA-Z0-9*&^%$£!?\.]{8,}" maxlength="16" placeholder="8-16 characters" required>
                     </p>
                 </div>
 
@@ -56,7 +56,7 @@
                     </p>
                     <p>
                         <label class="label" for="confirm-password">Confirm Password</label>
-                        <input class="input" type="password" id="confirm-password" name="confirm-password" placeholder="password" required>
+                        <input class="input" type="password" id="confirm-password" name="confirm-password" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[*&^%$£!?\.])[a-zA-Z0-9*&^%$£!?\.]{8,}" maxlength="16" placeholder="8-16 characters" required onkeyup="checkPassword()">
                     </p>
                     
                     <input type="submit" id="submit-form" class="hidden">
