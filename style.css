@@ -175,10 +175,19 @@ body {
     border-bottom: 1px solid var(--text-clr);
 }
 
+.input::placeholder {
+    color: #cccccc;
+}
+
 .input:not(:focus):not(:placeholder-shown):valid {
     background-color: rgba(0, 255, 0, 0.1);
 }
 
 .input:not(:focus):not(:placeholder-shown):invalid {
     background-color: rgba(255, 0, 0, 0.1);
+}
+
+.password-info {
+    color: var(--accent-clr);
+    font-size: 0.8rem;
 }

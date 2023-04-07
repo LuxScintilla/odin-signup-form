@@ -31,28 +31,31 @@
             <form class="form" action="/" method="post">
 
                 <div class="left-section">
-                    <p>
-                        <label class="label" for="first-name">First Name</label>
-                        <input class="input" type="text" id="first-name" name="first-name" minlength="1" maxlength="16" placeholder="Jack" required>
-                    </p>
+
                     <p>
                         <label class="label" for="email">Email</label>
                         <input class="input" type="email" id="email" name="email" placeholder="pirate@blackpearl.sea" pattern="[a-zA-Z0-9\.-_+]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}" required>
                     </p>
                     <p>
-                        <label class="label" for="password">Password</label>
-                        <input class="input" type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[*&^%$£!?\.])[a-zA-Z0-9*&^%$£!?\.]{8,}" maxlength="16" placeholder="8-16 characters" required>
+                        <label class="label" for="first-name">First Name</label>
+                        <input class="input" type="text" id="first-name" name="first-name" minlength="1" maxlength="16" placeholder="Jack" required>
                     </p>
-                </div>
-
-                <div class="right-section">
                     <p>
                         <label class="label" for="last-name">Last Name</label>
                         <input class="input" type="text" id="last-name" name="last-name" minlength="1" maxlength="20" placeholder="Sparrow">
                     </p>
+
+                </div>
+
+                <div class="right-section">
+ 
                     <p>
                         <label class="label" for="phone">Phone Number</label>
                         <input class="input" type="tel" id="phone" name="phone" placeholder="12345 123123">
+                    </p>
+                    <p>
+                        <label class="label" for="password">Password</label>
+                        <input class="input" type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[*&^%$£!?\.])[a-zA-Z0-9*&^%$£!?\.]{8,}" maxlength="16" placeholder="8-16 characters" required>
                     </p>
                     <p>
                         <label class="label" for="confirm-password">Confirm Password</label>
@@ -64,6 +67,7 @@
                 </div>
 
             </form>
+            <p class="password-info" >Contains at least one capital, number, and special (*&^%$£!?.)</p>
         </div>
 
         <div class="submit-wrap">
