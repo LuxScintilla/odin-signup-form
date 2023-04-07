@@ -55,7 +55,7 @@
                     </p>
                     <p>
                         <label class="label" for="password">Password</label>
-                        <input class="input" type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[*&^%$£!?\.])[a-zA-Z0-9*&^%$£!?\.]{8,}" maxlength="16" placeholder="8-16 characters" required>
+                        <input class="input" type="password" id="password" name="password" title="Contains at least one capital, number, and special (*&^%$£!?.)" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[*&^%$£!?\.])[a-zA-Z0-9*&^%$£!?\.]{8,}" maxlength="16" placeholder="8-16 characters" required>
                     </p>
                     <p>
                         <label class="label" for="confirm-password">Confirm Password</label>
@@ -67,7 +67,7 @@
                 </div>
 
             </form>
-            <p class="password-info" >Contains at least one capital, number, and special (*&^%$£!?.)</p>
+            <p class="password-info" >Password must contain at least one capital, number, and special (*&^%$£!?.)</p>
         </div>
 
         <div class="submit-wrap">
